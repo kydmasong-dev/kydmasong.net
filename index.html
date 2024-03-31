@@ -233,6 +233,7 @@
 										<li><input type="reset" value="Reset" /></li>
 									</ul>
 								</form>
+								<div id="form-status"></div>
 								<hr>
 								<h3>Follow</h3>
 								<ul class="icons">
@@ -868,6 +869,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/main.js"></script>
 			<script>
 				document.getElementById('currentYear').textContent = new Date().getFullYear();
+			</script>
+			<script>
+			  window.onload = function() {
+			    if (location.search === '?contact=success') {
+			      document.getElementById('form-status').innerHTML = 'Thank you for your message!';
+			    }
+			  }
 			</script>
 
 	</body>
